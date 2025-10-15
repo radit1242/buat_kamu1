@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gombalan</title>
+  <style>
+    body {
+      text-align: center;
+      background-color: #ffe6f2;
+      font-family: Arial, sans-serif;
+    }
+    h1 {
+      color: #ff4081;
+    }
+    img {
+      width: 250px;
+      border-radius: 10px;
+    }
+    #btn_mau, #btn_gamau {
+      position: absolute;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    #btn_mau {
+      background-color: #ff4081;
+      color: white;
+      left: 40%;
+      top: 70%;
+    }
+    #btn_gamau {
+      background-color: #ccc;
+      color: black;
+      left: 55%;
+      top: 70%;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hai Cantik ❤️</h1>
+  <img src="https://c.tenor.com/Z8ezUHZzcLoAAAAC/love.gif" alt="Love GIF">
+  <h1>Maukah kamu menjadi pacarku?</h1>
+  <button id="btn_mau" onclick="alert('I LOVE YOU ❤️')">Mau</button>
+  <button id="btn_gamau" onmouseover="gerak(this)">Gamau</button>
+
+  <script>
+    function gerak(btn) {
+      // buat tombol bergerak ke posisi acak saat diarahkan kursor
+      var x = Math.random() * (window.innerWidth - btn.offsetWidth);
+      var y = Math.random() * (window.innerHeight - btn.offsetHeight);
+      btn.style.left = x + "px";
+      btn.style.top = y + "px";
+    }
+  </script>
+</body>
+</html>
